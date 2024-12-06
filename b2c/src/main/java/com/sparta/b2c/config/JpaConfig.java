@@ -1,4 +1,4 @@
-package com.sparta.b2c.product.config;
+package com.sparta.b2c.config;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Configuration;
