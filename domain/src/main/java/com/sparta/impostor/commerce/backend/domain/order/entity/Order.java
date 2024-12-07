@@ -10,10 +10,14 @@ import lombok.Getter;
 
 @Entity
 @Getter
+@Table(name = "orders")
 public class Order extends Timestamped {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
     private String name;
 
     @Column(length = 50)
@@ -42,4 +46,9 @@ public class Order extends Timestamped {
     private Product product;
 
 
+    public Order update(String trackingNumber) {
+        this.trackingNumber = trackingNumber;
+        this.deliveryStatus = DeliveryStatus.IN_TRANSIT;
+        return this;
+    }
 }
