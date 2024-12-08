@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
 @EntityScan(basePackages = "com.sparta.impostor.commerce.backend")
-@EnableJpaRepositories(basePackages = "com.sparta.impostor.commerce.backend")
+//@EnableJpaRepositories(basePackages = "com.sparta.impostor.commerce.backend")
 public class JpaConfig {
 }
