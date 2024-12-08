@@ -4,10 +4,16 @@ import com.sparta.impostor.commerce.backend.common.baseentity.Timestamped;
 import com.sparta.impostor.commerce.backend.domain.product.enums.Category;
 import com.sparta.impostor.commerce.backend.domain.product.enums.ProductStatus;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Builder
 @Entity
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product extends Timestamped {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
